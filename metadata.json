@@ -1,0 +1,8 @@
+{
+  "name": "Remix بوابة تحضير زوم الذكية",
+  "description": "منصة ذكية متكاملة لإدارة وتحضير حصص زوم مصممة من قبل أحمد بدوي، تدعم ربط الواتساب الآلي، تذكيرات الـ 5 دقائق، استخراج الجداول بالذكاء الاصطناعي، ومسارات اللغات.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

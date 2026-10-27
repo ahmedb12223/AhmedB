@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>بوابة تحضير زوم الذكية | Zoom Attendance Gateway</title>
+    <meta name="description" content="منصة ذكية متكاملة لإدارة وتحضير حصص زوم المباشرة للمدارس واللغات، تدعم الفصول ومسارات اللغات وتقارير الغياب للواتساب." />
+    <meta property="og:title" content="بوابة تحضير زوم الذكية | Zoom Attendance Gateway" />
+    <meta property="og:description" content="منصة ذكية متكاملة لإدارة وتحضير حصص زوم المباشرة للمدارس واللغات، تدعم الفصول ومسارات اللغات وتقارير الغياب للواتساب." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <script>
+      (function () {
+        var shouldIgnore = function (args) {
+          try {
+            var msg = Array.prototype.slice.call(args).map(function (a) {
+              return typeof a === 'string' ? a : (a && a.message ? a.message : String(a));
+            }).join(' ');
+            return (
+              msg.indexOf('@firebase/firestore') !== -1 ||
+              msg.indexOf('resource-exhausted') !== -1 ||
+              msg.indexOf('Quota limit exceeded') !== -1 ||
+              msg.indexOf('Using maximum backoff delay') !== -1 ||
+              msg.indexOf('firestore.googleapis.com') !== -1
+            );
+          } catch (e) {
+            return false;
+          }
+        };
+        var origError = console.error;
+        var origWarn = console.warn;
+        console.error = function () {
+          if (shouldIgnore(arguments)) return;
+          return origError.apply(console, arguments);
+        };
+        console.warn = function () {
+          if (shouldIgnore(arguments)) return;
+          return origWarn.apply(console, arguments);
+        };
+        window.addEventListener('unhandledrejection', function (e) {
+          if (e && e.reason && shouldIgnore([e.reason])) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }, true);
+        try {
+          if (window.indexedDB && typeof window.indexedDB.databases === 'function') {
+            window.indexedDB.databases().then(function (dbs) {
+              (dbs || []).forEach(function (db) {
+                if (db && db.name && db.name.toLowerCase().indexOf('firestore') !== -1) {
+                  try { window.indexedDB.deleteDatabase(db.name); } catch (_) {}
+                }
+              });
+            }).catch(function () {});
+          }
+        } catch (_) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 text-slate-900 font-sans antialiased selection:bg-indigo-100 selection:text-indigo-900">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx?v=2"></script>
+  </body>
+</html>
+

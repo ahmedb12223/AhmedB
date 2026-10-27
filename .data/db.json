@@ -1,0 +1,67 @@
+{
+  "teachers": [
+    {
+      "id": "teacher_ahmed_badawi",
+      "name": "مستر احمد بدوي",
+      "subject": "الرياضيات (Math)",
+      "schoolName": "مدرسة اللغات الحديثة",
+      "email": "ahmedbadawi5090@gmail.com",
+      "defaultZoomLink": "",
+      "assignedClassIds": [
+        "class_gr4___a",
+        "class_gr4___b",
+        "class_gr5___a",
+        "class_gr6___a",
+        "class_gr7___a",
+        "class_gr8___a"
+      ],
+      "weeklySchedule": [
+        { "id": "badawi_sun_1", "dayOfWeek": "sunday", "dayNameArabic": "الأحد", "className": "الصف الرابع عربي (4B)", "classId": "class_gr4___b", "startTime": "08:00", "endTime": "08:40", "subject": "Math", "targetTrack": "all", "zoomUrl": "" },
+        { "id": "badawi_sun_2", "dayOfWeek": "sunday", "dayNameArabic": "الأحد", "className": "الصف الرابع لغات (4A)", "classId": "class_gr4___a", "startTime": "08:40", "endTime": "09:20", "subject": "Math", "targetTrack": "all", "zoomUrl": "" },
+        { "id": "badawi_sun_3", "dayOfWeek": "sunday", "dayNameArabic": "الأحد", "className": "الصف الأول الإعدادي (7A)", "classId": "class_gr7___a", "startTime": "09:20", "endTime": "10:00", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_sun_4", "dayOfWeek": "sunday", "dayNameArabic": "الأحد", "className": "الصف الخامس (5A)", "classId": "class_gr5___a", "startTime": "10:00", "endTime": "10:45", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_sun_5", "dayOfWeek": "sunday", "dayNameArabic": "الأحد", "className": "الصف السادس (6A)", "classId": "class_gr6___a", "startTime": "10:45", "endTime": "11:25", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_sun_6", "dayOfWeek": "sunday", "dayNameArabic": "الأحد", "className": "الصف الثاني الإعدادي (8A)", "classId": "class_gr8___a", "startTime": "11:25", "endTime": "12:05", "subject": "Math", "targetTrack": "arabic", "zoomUrl": "" },
+        { "id": "badawi_mon_1", "dayOfWeek": "monday", "dayNameArabic": "الإثنين", "className": "الصف الأول الإعدادي (7A)", "classId": "class_gr7___a", "startTime": "08:00", "endTime": "08:40", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_mon_2", "dayOfWeek": "monday", "dayNameArabic": "الإثنين", "className": "الصف السادس (6A)", "classId": "class_gr6___a", "startTime": "08:40", "endTime": "09:20", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_mon_3", "dayOfWeek": "monday", "dayNameArabic": "الإثنين", "className": "الصف الخامس (5A)", "classId": "class_gr5___a", "startTime": "09:20", "endTime": "10:00", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_mon_4", "dayOfWeek": "monday", "dayNameArabic": "الإثنين", "className": "الصف الثاني الإعدادي (8A)", "classId": "class_gr8___a", "startTime": "10:00", "endTime": "10:45", "subject": "Math", "targetTrack": "arabic", "zoomUrl": "" },
+        { "id": "badawi_mon_5", "dayOfWeek": "monday", "dayNameArabic": "الإثنين", "className": "الصف الرابع عربي (4B)", "classId": "class_gr4___b", "startTime": "10:45", "endTime": "11:25", "subject": "Math", "targetTrack": "all", "zoomUrl": "" },
+        { "id": "badawi_mon_6", "dayOfWeek": "monday", "dayNameArabic": "الإثنين", "className": "الصف الرابع لغات (4A)", "classId": "class_gr4___a", "startTime": "12:05", "endTime": "12:45", "subject": "Math", "targetTrack": "all", "zoomUrl": "" },
+        { "id": "badawi_tue_1", "dayOfWeek": "tuesday", "dayNameArabic": "الثلاثاء", "className": "الصف الرابع لغات (4A)", "classId": "class_gr4___a", "startTime": "08:40", "endTime": "09:20", "subject": "Math", "targetTrack": "all", "zoomUrl": "" },
+        { "id": "badawi_tue_2", "dayOfWeek": "tuesday", "dayNameArabic": "الثلاثاء", "className": "الصف الخامس (5A)", "classId": "class_gr5___a", "startTime": "09:20", "endTime": "10:00", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_tue_3", "dayOfWeek": "tuesday", "dayNameArabic": "الثلاثاء", "className": "الصف السادس (6A)", "classId": "class_gr6___a", "startTime": "10:00", "endTime": "10:45", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_tue_4", "dayOfWeek": "tuesday", "dayNameArabic": "الثلاثاء", "className": "الصف الرابع عربي (4B)", "classId": "class_gr4___b", "startTime": "10:45", "endTime": "11:25", "subject": "Math", "targetTrack": "all", "zoomUrl": "" },
+        { "id": "badawi_tue_5", "dayOfWeek": "tuesday", "dayNameArabic": "الثلاثاء", "className": "الصف الأول الإعدادي (7A)", "classId": "class_gr7___a", "startTime": "11:25", "endTime": "12:05", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_tue_6", "dayOfWeek": "tuesday", "dayNameArabic": "الثلاثاء", "className": "الصف الثاني الإعدادي (8A)", "classId": "class_gr8___a", "startTime": "12:05", "endTime": "12:45", "subject": "Math", "targetTrack": "arabic", "zoomUrl": "" },
+        { "id": "badawi_wed_1", "dayOfWeek": "wednesday", "dayNameArabic": "الأربعاء", "className": "الصف الرابع عربي (4B)", "classId": "class_gr4___b", "startTime": "08:00", "endTime": "08:40", "subject": "Math", "targetTrack": "all", "zoomUrl": "" },
+        { "id": "badawi_wed_2", "dayOfWeek": "wednesday", "dayNameArabic": "الأربعاء", "className": "الصف الرابع لغات (4A)", "classId": "class_gr4___a", "startTime": "08:40", "endTime": "09:20", "subject": "Math", "targetTrack": "all", "zoomUrl": "" },
+        { "id": "badawi_wed_3", "dayOfWeek": "wednesday", "dayNameArabic": "الأربعاء", "className": "الصف الأول الإعدادي (7A)", "classId": "class_gr7___a", "startTime": "09:20", "endTime": "10:00", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_wed_4", "dayOfWeek": "wednesday", "dayNameArabic": "الأربعاء", "className": "الصف السادس (6A)", "classId": "class_gr6___a", "startTime": "10:00", "endTime": "10:45", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_wed_5", "dayOfWeek": "wednesday", "dayNameArabic": "الأربعاء", "className": "الصف الثاني الإعدادي (8A)", "classId": "class_gr8___a", "startTime": "10:45", "endTime": "11:25", "subject": "Math", "targetTrack": "arabic", "zoomUrl": "" },
+        { "id": "badawi_wed_6", "dayOfWeek": "wednesday", "dayNameArabic": "الأربعاء", "className": "الصف الخامس (5A)", "classId": "class_gr5___a", "startTime": "11:25", "endTime": "12:05", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_thu_1", "dayOfWeek": "thursday", "dayNameArabic": "الخميس", "className": "الصف الثاني الإعدادي (8A)", "classId": "class_gr8___a", "startTime": "08:40", "endTime": "09:20", "subject": "Math", "targetTrack": "arabic", "zoomUrl": "" },
+        { "id": "badawi_thu_2", "dayOfWeek": "thursday", "dayNameArabic": "الخميس", "className": "الصف الأول الإعدادي (7A)", "classId": "class_gr7___a", "startTime": "09:20", "endTime": "10:00", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_thu_3", "dayOfWeek": "thursday", "dayNameArabic": "الخميس", "className": "الصف الرابع عربي (4B)", "classId": "class_gr4___b", "startTime": "10:00", "endTime": "10:45", "subject": "Math", "targetTrack": "all", "zoomUrl": "" },
+        { "id": "badawi_thu_4", "dayOfWeek": "thursday", "dayNameArabic": "الخميس", "className": "الصف الخامس (5A)", "classId": "class_gr5___a", "startTime": "10:45", "endTime": "11:25", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_thu_5", "dayOfWeek": "thursday", "dayNameArabic": "الخميس", "className": "الصف السادس (6A)", "classId": "class_gr6___a", "startTime": "11:25", "endTime": "12:05", "subject": "Math", "targetTrack": "english", "zoomUrl": "" },
+        { "id": "badawi_thu_6", "dayOfWeek": "thursday", "dayNameArabic": "الخميس", "className": "الصف الرابع لغات (4A)", "classId": "class_gr4___a", "startTime": "12:05", "endTime": "12:45", "subject": "Math", "targetTrack": "all", "zoomUrl": "" }
+      ]
+    }
+  ],
+  "classes": [
+    { "id": "class_gr4___a", "name": "GR4 A", "gradeLevel": "المرحلة الدراسية", "zoomUrl": "", "createdAt": "2026-10-21T15:22:40.548Z" },
+    { "id": "class_gr4___b", "name": "GR4 B", "gradeLevel": "المرحلة الدراسية", "zoomUrl": "", "createdAt": "2026-10-21T15:22:40.549Z" },
+    { "id": "class_gr5___a", "name": "GR5 A", "gradeLevel": "المرحلة الدراسية", "zoomUrl": "", "createdAt": "2026-10-21T15:22:40.549Z" },
+    { "id": "class_gr6___a", "name": "GR6 A", "gradeLevel": "المرحلة الدراسية", "zoomUrl": "", "createdAt": "2026-10-21T15:22:40.549Z" },
+    { "id": "class_gr7___a", "name": "GR7 A", "gradeLevel": "المرحلة الدراسية", "zoomUrl": "", "createdAt": "2026-10-21T15:22:40.549Z" },
+    { "id": "class_gr7___b", "name": "GR7 B", "gradeLevel": "المرحلة الدراسية", "zoomUrl": "", "createdAt": "2026-10-21T15:22:40.549Z" },
+    { "id": "class_gr8___a", "name": "GR8 A", "gradeLevel": "المرحلة الدراسية", "zoomUrl": "", "createdAt": "2026-10-21T15:22:40.549Z" },
+    { "id": "class_gr9___a", "name": "GR9 A", "gradeLevel": "المرحلة الدراسية", "zoomUrl": "", "createdAt": "2026-10-21T15:22:40.549Z" }
+  ],
+  "students": [],
+  "sessions": [],
+  "deletedSessionIds": [],
+  "teacherPin": "123654",
+  "whatsappLogs": []
+}
