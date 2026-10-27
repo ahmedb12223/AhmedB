@@ -1,0 +1,67 @@
+# Base44 sandbox runbook for this repository.
+#
+# The app is a single Node/Express process (server.ts) that serves the React SPA
+# through Vite dev middleware and exposes the /api/* endpoints on the same origin
+# and the same port (3000). It runs from the cloned source with `tsx server.ts`
+# (package.json "dev"), so code edits are picked up without rebuilding an image.
+#
+# Everything else (teachers, classes, students, sessions) is persisted by the
+# server in the JSON file at ./.data/db.json, which lives in the bind-mounted repo.
+services:
+  app:
+    # Plain runtime base image + repo bind-mounted: the app is never run from a
+    # prebuilt application image, so edits stay visible.
+    image: oven/bun:1
+    working_dir: /app
+    # The repo pins dependencies with bun.lock, so the project's own package
+    # manager (bun) installs them. `--no-save` keeps the (slightly stale, it still
+    # lists a removed `firebase` dependency) lockfile untouched instead of
+    # rewriting a tracked file on every boot; dependencies still resolve from
+    # package.json ranges. node_modules is a docker volume, so the install runs
+    # here, after the mounts are available, and is incremental on restart.
+    command:
+      - sh
+      - -ec
+      - bun install --no-save && exec bun run dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - app_node_modules:/app/node_modules
+    environment:
+      # Platform-provided preview flag; passed through as-is. `tsx server.ts`
+      # itself runs in development mode (Vite dev middleware) unless NODE_ENV is
+      # set to "production", which nothing here does.
+      - BASE44_PREVIEW_MODE
+      # The platform sets this so Vite appends the preview host to its allowed
+      # hosts (Vite >= 6.1). Referenced bare so the value is never hardcoded.
+      - __VITE_ADDITIONAL_SERVER_ALLOWED_HOSTS
+    env_file:
+      # Platform-managed secrets (outside the repo). Last so user-supplied values
+      # always win over anything else. Currently holds GEMINI_API_KEY, which the
+      # AI schedule parser and copilot endpoints read; the app boots without it
+      # and degrades gracefully there.
+      - /run/base44/app.env
+    restart: on-failure
+    healthcheck:
+      # The single process serves both the SPA and the API, so check both: an
+      # HTML front page and the API health payload. Uses bun (already in the
+      # image) so no extra tools are needed. Reports which probe failed.
+      test:
+        - CMD-SHELL
+        - >-
+          bun -e "const urls=['http://127.0.0.1:3000/api/health','http://127.0.0.1:3000/'];
+          for (const u of urls) { try { const r = await fetch(u); if (!r.ok) { console.error('failed: '+u+' -> '+r.status); process.exit(1); } }
+          catch (e) { console.error('failed: '+u+' -> '+e.message); process.exit(1); } } console.log('ok');"
+      interval: 15s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    labels:
+      base44.project: "Zoom Attendance Gateway"
+      base44.kind: "web"
+      base44.port: "3000"
+      base44.docs: "/api/health"
+
+volumes:
+  app_node_modules:

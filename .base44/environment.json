@@ -1,0 +1,12 @@
+{
+  "previewPort": 3000,
+  "healthPath": "/api/health",
+  "startCommand": "docker compose -f docker-compose.base44.yml up -d",
+  "secrets": [
+    {
+      "name": "GEMINI_API_KEY",
+      "description": "Google Gemini API key (https://aistudio.google.com/apikey). Used server-side by the AI schedule parser (/api/schedule/parse-ai) and the AI copilot (/api/ai/copilot). Optional: the app boots and every other feature works without it, but those two AI endpoints return an error until a real key is provided.",
+      "requiredAtBoot": false
+    }
+  ]
+}
